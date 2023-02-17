@@ -1,0 +1,61 @@
+     <!-- <div class='completed-container-header hide-header'><i class="fa-solid fa-angle-down arrow-rotate"></i> Completed</div> -->
+      <!-- <div class="added-task">
+        <div>
+        Lorem ipsum dolor sit amet.
+      </div>
+        <div class="operations-container">
+          <input type="checkbox" class="not-done"/>
+          <i title="Delete" class="fa-solid fa-xmark"></i>
+        </div>
+      </div> -->
+      <!-- <div class="forget">
+
+      </div>  -->
+
+      let inputtedText = document.querySelector('input[type="text"]');
+let buttonToAdd = document.querySelector("#to-add-task");
+let secondBody = document.querySelector(".second-body");
+// create tasks
+// let taskContainer = document.createElement("div");
+// let operationsContainer = document.createElement("div");
+// let doneTask = document.createElement("input");
+// let deleteTask = document.createElement("i");
+// add classes
+taskContainer.className = `added-task `;
+operationsContainer.className = "operations-container";
+doneTask.type = "checkbox";
+deleteTask.className = `fa-solid fa-xmark `;
+// events
+buttonToAdd.addEventListener("click", createTasks);
+// functions
+taskContainer.innerHTML = inputtedText.value;
+
+function createTasks() {
+  secondBody.innerHTML += `${taskContainer}`;
+}
+// // functions
+// let arrayOfTasks = [];
+// taskContainer.innerHTML = inputtedText.value;
+// function createTasks() {
+//   // add classes
+//   taskContainer.className = `added-task `;
+//   operationsContainer.className = "operations-container";
+//   doneTask.type = "checkbox";
+//   // doneTask.className = `done-task-${i}`;
+//   deleteTask.className = `fa-solid fa-xmark `;
+//   // appending main tasks' elements
+//   operationsContainer.appendChild(doneTask);
+//   operationsContainer.appendChild(deleteTask);
+
+//   taskContainer.appendChild(operationsContainer);
+//   arrayOfTasks.push(taskContainer);
+//   console.log(arrayOfTasks)
+//   addElementToSecondBody(arrayOfTasks);
+// }
+// function addElementToSecondBody(tasks) {
+
+//   tasks.forEach((element) => {
+//     // console.log(element)
+//     secondBody.appendChild(element);
+//   });
+// }
